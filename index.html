@@ -69,35 +69,53 @@ nav a {
 
 .contact-card {
     display: grid;
-    grid-template-columns: 1fr minmax(140px, 160px);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 20px;
     padding: 20px;
     align-items: center;
+    min-width: 0;
 }
 
 .contact-card .contact-selfie {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
     object-fit: cover;
 }
 
 .contact-card .contact-details {
-    min-width: 200px;
+    min-width: 0;
 }
 
 .contact-card .contact-details p {
-    margin: 8px 0;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
-@media (max-width: 700px) {
-    .contact-card {
-        grid-template-columns: 1fr;
-    }
-    .contact-card .contact-selfie {
-        width: 100%;
-        height: auto;
-    }
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1f2937;
+    color: #38bdf8;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.contact-details a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
 }
 
 h2 {
@@ -229,10 +247,10 @@ footer {
     <div class="contact-grid">
         <div class="card contact-card">
             <div class="contact-details">
-                <p>Email: joetkk@outlook.my</p>
-                <p>GitHub: github.com/joetkk</p>
-                <p>LinkedIn: linkedin.com/in/joetkk</p>
-                <p>Mobile: +6016 201 0402</p>
+                <p><span class="contact-icon">✉</span><a href="mailto:joetkk@outlook.my">joetkk@outlook.my</a></p>
+                <p><span class="contact-icon">🐙</span><a href="https://github.com/joetkk" target="_blank">github.com/joetkk</a></p>
+                <p><span class="contact-icon">in</span><a href="https://linkedin.com/in/joetkk" target="_blank">linkedin.com/in/joetkk</a></p>
+                <p><span class="contact-icon">📱</span><a href="tel:+60162010402">+6016 201 0402</a></p>
             </div>
             <img class="contact-selfie" src="selfie.png" alt="Selfie">
         </div>
