@@ -62,23 +62,42 @@ nav a {
 .contact-grid {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 30px;
 }
 
-.contact-selfie {
-    width: 320px;
-    max-width: 100%;
-    border-radius: 20px;
+.contact-card {
+    display: grid;
+    grid-template-columns: 1fr minmax(140px, 160px);
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.contact-card .contact-selfie {
+    width: 160px;
+    height: 160px;
+    border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
     object-fit: cover;
 }
 
-.contact-grid .card {
-    flex: 1 1 320px;
-    min-width: 280px;
-    max-width: 500px;
+.contact-card .contact-details {
+    min-width: 200px;
+}
+
+.contact-card .contact-details p {
+    margin: 8px 0;
+}
+@media (max-width: 700px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+    .contact-card .contact-selfie {
+        width: 100%;
+        height: auto;
+    }
 }
 
 h2 {
@@ -208,13 +227,15 @@ footer {
 <div class="section" id="contact">
     <h2>Contact</h2>
     <div class="contact-grid">
-        <div class="card">
-            <p>Email: joetkk@outlook.my</p>
-            <p>GitHub: github.com/joetkk</p>
-            <p>LinkedIn: linkedin.com/in/joetkk</p>
-            <p>Mobile: +6016 201 0402</p>
+        <div class="card contact-card">
+            <div class="contact-details">
+                <p>Email: joetkk@outlook.my</p>
+                <p>GitHub: github.com/joetkk</p>
+                <p>LinkedIn: linkedin.com/in/joetkk</p>
+                <p>Mobile: +6016 201 0402</p>
+            </div>
+            <img class="contact-selfie" src="selfie.png" alt="Selfie">
         </div>
-        <img class="contact-selfie" src="selfie.png" alt="Selfie">
     </div>
 </div>
 
