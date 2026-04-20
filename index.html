@@ -59,6 +59,28 @@ nav a {
     margin: auto;
 }
 
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-selfie {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+.contact-grid .card {
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 500px;
+}
+
 h2 {
     margin-bottom: 20px;
     border-left: 4px solid #38bdf8;
@@ -185,11 +207,14 @@ footer {
 
 <div class="section" id="contact">
     <h2>Contact</h2>
-    <div class="card">
-        <p>Email: joetkk@outlook.my</p>
-        <p>GitHub: github.com/joetkk</p>
-        <p>LinkedIn: linkedin.com/in/joetkk</p>
-        <p>Mobile: +6016 201 0402</p>
+    <div class="contact-grid">
+        <div class="card">
+            <p>Email: joetkk@outlook.my</p>
+            <p>GitHub: github.com/joetkk</p>
+            <p>LinkedIn: linkedin.com/in/joetkk</p>
+            <p>Mobile: +6016 201 0402</p>
+        </div>
+        <img class="contact-selfie" src="selfie.png" alt="Selfie">
     </div>
 </div>
 
